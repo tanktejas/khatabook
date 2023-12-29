@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { getAuth } from "firebase/auth"; 
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'khtabook';
+  // auth1:any = getAuth();
+  user:any;
+ 
+
 }
