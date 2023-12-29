@@ -1,0 +1,23 @@
+<div class="history">
+  <h2>Your transaction History</h2>
+  <div class="hdom">
+    <table class="table">
+      <thead class="darkbg">
+        <tr class="darkbg">
+          <th scope="col" class="darkbg">#</th>
+          <th scope="col" class="darkbg">person</th>
+          <th scope="col" class="darkbg">money</th>
+          <th scope="col" class="darkbg">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ele of history; let i = index; trackBy:tbyfun">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ ele.person }}</td>
+          <td>{{ ele.money }}</td>
+          <td>{{ ele.description }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

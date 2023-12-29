@@ -1,0 +1,34 @@
+<!-- <p>home works!</p> -->
+<!-- <h2 *ngIf="user">{{ user  }}</h2> -->
+
+<div class="mainhome">
+    <div class="firstsec">
+        <div class="left">
+            <h1>Welcome to KhataBook. Here you can manage your account</h1>
+        </div>
+        <div class="right"> 
+            <img loading="lazy" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp" alt="">
+        </div>
+    </div>
+    <div class="secondsec">
+        <h1>Our services</h1>
+        <div class="cards">
+        <div class="card" *ngFor="let ele of services">
+          <div class="card text-white">
+              <div class="card-inner">
+                <div class="cardfirst">
+                  <h1>{{ele.name}}</h1>
+                </div>
+                <div class="card-img-overlay">
+                  <h5 class="card-title">{{ele.name}}</h5>
+                  <p class="card-text" *ngFor="let spec of ele.spec">{{spec}}</p> 
+                </div>
+              </div>
+            </div>                  
+      </div>
+    </div>
+    </div>
+</div>
+
+
+<button #btns>ok</button>

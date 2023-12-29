@@ -1,0 +1,61 @@
+<div class="personaldiary">
+  <div class="moneyshow">
+    <h2>Total money of {{email}}</h2>
+    <h2>{{+totalmoney + " Rs"}}</h2>
+  </div>
+  <div class="personalfirst">
+    <h2>Add Money</h2>
+    <form [formGroup]="moneyaddform" (ngSubmit)="addmoney()">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Money</label>
+          <input
+            type="number"
+            class="form-control"
+            id="inputPassword4"
+            placeholder="Money"
+            formControlName="money"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputAddress"
+          placeholder="Lunch, Dinner, Breakfast etc..."
+          formControlName="description"
+        />
+      </div>
+
+      <button type="submit" class="addbtn btn btn-primary">Add</button>
+    </form>
+  </div>
+
+  <div class="personalsecond">
+    <h2>History for this user</h2>
+    <table class="table">
+      <thead class="darkbg">
+        <tr class="darkbg">
+          <th scope="col" class="darkbg">#</th> 
+          <th scope="col" class="darkbg">money</th>
+          <th scope="col" class="darkbg">Description</th>
+          <th scope="col" class="darkbg"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ele of personaldiary[email]; let i=index"> 
+          <th scope="row">{{i+1}}</th> 
+          <td>{{ele.money}}</td>
+          <td>
+            {{ele.description}}
+          </td>
+          <td>
+            <button (click)="delete(i)">Remove</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

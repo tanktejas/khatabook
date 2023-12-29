@@ -1,0 +1,16 @@
+.personalfirst,.personalsecond{
+    margin: auto;
+    width: 80%;
+}
+.personalfirst h2,.personalsecond h2,.moneyshow h2{
+    text-align: center;
+}
+.addbtn{
+    margin-top: 7px;
+}
+.personalsecond table{
+    width: 80% !important;
+}
+.personalfirst,.personalsecond,.moneyshow{
+    margin-bottom: 38px;
+}

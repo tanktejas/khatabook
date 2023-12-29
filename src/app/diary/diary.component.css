@@ -1,0 +1,42 @@
+.dheader{
+    display: flex;
+    justify-content: center;
+}
+.darkbg{
+    background-color: rgb(25, 19, 19);
+    color: white;
+}
+.dcontent{
+    /* margin: 12px; */
+    display: flex;
+    justify-content: center;
+}
+.dcontent table{
+    width: 80%;
+}
+
+td,tr{
+    text-align: center;
+}
+
+.diarybtn{
+    background-color: rgba(0, 0, 255, 0.696);
+    padding: 5px;
+    border-radius: 5px;
+    border:1px solid rgba(0, 0, 255, 0.696);
+}
+
+.diarybtn a{
+    color: white;
+    text-decoration: none;
+}
+.headerdiary form{
+    width: 80%;
+    margin: auto;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+}
+.ds{
+    margin-top: 9px;
+}

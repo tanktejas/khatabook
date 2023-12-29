@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">KhataBook</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a
+            [routerLink]="['/home']"
+            class="nav-link active"
+            aria-current="page"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/diary']">Diary</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/history']">History</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Move Login and Signin buttons to the right -->
+    <div class="ms-auto" *ngIf="!user">
+      <button class="btn btn-warning">
+        <a [routerLink]="['/login']" style="text-decoration: none; color: black"
+          >logIn/signIn</a
+        >
+      </button>
+    </div>
+
+    <div class="ms-auto" *ngIf="user">
+      <button class="btn btn-warning" (click)="logout()">logOut</button>
+    </div>
+  </div>
+</nav>

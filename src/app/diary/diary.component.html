@@ -1,0 +1,50 @@
+<div class="maindiary">
+  <div class="headerdiary">
+    <div class="dheader"><h1>Add People</h1></div>
+    <form [formGroup]="diarypeopleform" (ngSubmit)="addpeople()">
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Name of User</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputPassword4"
+            placeholder="John Doe"
+            formControlName="name"
+          />
+        </div>
+      </div>
+
+      <div class="ds">
+      <button type="submit" class="addbtn btn btn-primary">Add</button>
+    </div>
+    </form>
+  </div>
+<div class="diary" >
+    <div class="dheader"><h1>My Diary</h1></div>
+    <div class="dcontent">
+        <table class="table">
+            <thead class="darkbg">
+              <tr class="darkbg">
+                <th scope="col" class="darkbg">#</th>
+                <th scope="col" class="darkbg">Name</th> 
+                <th scope="col" class="darkbg"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let emaili of keys; let i=index;">
+                <th scope="row">{{i+1}}</th>
+                <td>{{emaili}}</td>
+                <td>
+                    <button class="diarybtn">
+                      <a [routerLink]="emaili">Diary</a>
+                    </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    
+    </div>
+</div>
+</div>
