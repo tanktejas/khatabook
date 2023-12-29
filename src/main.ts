@@ -14,3 +14,6 @@ firebase.initializeApp(env.firebaseConfig); // Initialize Firebase
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
+
+
+  // real content
