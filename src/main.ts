@@ -20,3 +20,4 @@ platformBrowserDynamic().bootstrapModule(AppModule)
   //temp content
   //permanent content
   //correction f1
+  //ko
