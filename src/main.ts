@@ -19,4 +19,6 @@ platformBrowserDynamic().bootstrapModule(AppModule)
   // real content
   //temp content
   //permanent content
+  //correction f1
   //ko
+  //feature 2
